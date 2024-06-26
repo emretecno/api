@@ -9,7 +9,7 @@
             fetch('https://api.ipify.org?format=json')
                 .then(response => response.json())
                 .then(data => {
-                    document.getElementById('ip-address').innerText = 'IP Adresiniz: ' + data.ip;
+                    document.body.innerHTML = '<h1>IP Adresiniz: ' + data.ip + '</h1>';
                 })
                 .catch(error => {
                     console.error('IP adresini alırken bir hata oluştu:', error);
@@ -18,7 +18,5 @@
     </script>
 </head>
 <body>
-    <h1>IP Adresinizi Öğrenin</h1>
-    <p id="ip-address">IP adresiniz alınıyor...</p>
 </body>
 </html>
